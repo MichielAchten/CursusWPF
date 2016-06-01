@@ -1,0 +1,27 @@
+﻿<Window x:Class="TekstVerwerken.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Werken met Tekst" Height="400" Width="525">
+    <StackPanel Margin="25">
+        <TextBlock TextAlignment="Center" FontSize="24" TextWrapping="Wrap" Background="Aqua" Foreground="Blue" ToolTip="Voorbeeldtekst">
+            Dit is een <Italic>voorbeeld</Italic> van <LineBreak/> het 
+            <Bold> gebruik </Bold> van <Underline> WERKEN MET </Underline> <Span Background="Yellow" FontSize="42"> TEKST </Span>
+        </TextBlock>
+        <Grid Margin="25">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Margin="5" Content="_Gebruikersnaam"
+                   Target="{Binding ElementName=textBoxGebruikersnaam}"></Label>
+            <Label Grid.Row="1" Grid.Column="0" Margin="5" Content="_Paswoord"
+                   Target="{Binding ElementName=psdBox}"></Label>
+            <TextBox Grid.Row="0" Grid.Column="1" Margin="5" Name="textBoxGebruikersnaam"></TextBox>
+            <PasswordBox Grid.Row="1" Grid.Column="1" Margin="5" Name="psdBox"></PasswordBox>
+        </Grid>
+    </StackPanel>
+</Window>

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCursus", "WpfCursus\WpfC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfOefeningVerkeerslicht", "WpfOefeningVerkeerslicht\WpfOefeningVerkeerslicht.csproj", "{E9939A01-8FB3-40BE-8D06-5C3B0493F039}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TekstVerwerken", "TekstVerwerken\TekstVerwerken.csproj", "{71E86DE8-ACF5-4C3B-BD98-7E39B6D86BFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E9939A01-8FB3-40BE-8D06-5C3B0493F039}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9939A01-8FB3-40BE-8D06-5C3B0493F039}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9939A01-8FB3-40BE-8D06-5C3B0493F039}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71E86DE8-ACF5-4C3B-BD98-7E39B6D86BFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71E86DE8-ACF5-4C3B-BD98-7E39B6D86BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71E86DE8-ACF5-4C3B-BD98-7E39B6D86BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71E86DE8-ACF5-4C3B-BD98-7E39B6D86BFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
