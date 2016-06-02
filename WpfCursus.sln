@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCursus", "WpfCursus\WpfCursus.csproj", "{C4F7FF4B-CBC4-420F-9A2D-2767935925A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfOefeningVerkeerslicht", "WpfOefeningVerkeerslicht\WpfOefeningVerkeerslicht.csproj", "{E9939A01-8FB3-40BE-8D06-5C3B0493F039}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TekstVerwerken", "TekstVerwerken\TekstVerwerken.csproj", "{71E86DE8-ACF5-4C3B-BD98-7E39B6D86BFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonGebruikWindow", "ButtonGebruikWindow\ButtonGebruikWindow.csproj", "{3644C146-4F71-4949-9909-B870839B6FF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{71E86DE8-ACF5-4C3B-BD98-7E39B6D86BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71E86DE8-ACF5-4C3B-BD98-7E39B6D86BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71E86DE8-ACF5-4C3B-BD98-7E39B6D86BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3644C146-4F71-4949-9909-B870839B6FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3644C146-4F71-4949-9909-B870839B6FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3644C146-4F71-4949-9909-B870839B6FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3644C146-4F71-4949-9909-B870839B6FF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
