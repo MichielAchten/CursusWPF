@@ -1,0 +1,39 @@
+﻿<Window x:Class="OefeningBestelbonPizza.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PizzaBestellen" Height="350" Width="525">
+    <StackPanel Orientation="Vertical">
+        <Label Name="Titel" HorizontalAlignment="Center" FontSize="24">Pizza bestellen</Label>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Name="groottePanel" Orientation="Vertical">
+                    <RadioButton Name="RadioButtonSmall" Margin="10 5 10 5" Checked="Grootte_Checked">small</RadioButton>
+                    <RadioButton Name="RadioButtonMedium" Margin="10 5 10 5" Checked="Grootte_Checked">medium</RadioButton>
+                    <RadioButton Name="RadioButtonLarge" Margin="10 5 10 5" IsChecked="True" Checked="Grootte_Checked">large</RadioButton>
+                </StackPanel>
+                <Rectangle Fill="Black" Height="1" Width="250" Margin="10"></Rectangle>
+                <StackPanel Name="ingrediëntenPanel" Orientation="Vertical">
+                    <CheckBox Name="CheckBoxTomaat" Margin="10 5 10 5" IsChecked="True" IsEnabled="False" Click="CheckBoxIngrediënt_Click">tomaat</CheckBox>
+                    <CheckBox Name="CheckBoxKaas" Margin="10 5 10 5" IsChecked="True" IsEnabled="False" Click="CheckBoxIngrediënt_Click">kaas</CheckBox>
+                    <CheckBox Name="CheckBoxHam" Margin="10 5 10 5" Click="CheckBoxIngrediënt_Click">ham</CheckBox>
+                    <CheckBox Name="CheckBoxAnanas" Margin="10 5 10 5" Click="CheckBoxIngrediënt_Click">ananas</CheckBox>
+                    <CheckBox Name="CheckBoxSalami" Margin="10 5 10 5" Click="CheckBoxIngrediënt_Click">salami</CheckBox>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Name="ExtraPanel" Orientation="Vertical">
+                <ToggleButton Name="ExtraKorstToggleButton" Height="20" Width="200" Margin="5" Checked="ToggleButton_Checked">extra dikke korst</ToggleButton>
+                <ToggleButton Name="ExtraKaasToggleButto" Height="20" Width="200" Margin="5" Checked="ToggleButton_Checked">extra kaas</ToggleButton>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="0 0 20 0" VerticalAlignment="Center">hoeveelheid:</TextBlock>
+                    <TextBlock Margin="0 0 20 0" VerticalAlignment="Center">1</TextBlock>
+                    <StackPanel Orientation="Vertical">
+                        <RepeatButton Name="ButtonPlus" Height="20">+</RepeatButton>
+                        <RepeatButton Name="ButtonMin" Height="20">-</RepeatButton>
+                    </StackPanel>
+                </StackPanel>
+                <Button Height="125" Width="100" Margin="0 10 0 0" Click="Button_Click">BESTELLEN</Button>
+            </StackPanel>
+        </StackPanel>
+        <TextBlock Name="textBlockBestelling"></TextBlock>
+    </StackPanel>
+</Window>
