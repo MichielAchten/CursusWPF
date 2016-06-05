@@ -29,11 +29,13 @@ namespace OefeningBestelbonPizza
         static string grootte;
         static string ingrediënten = "tomaat en kaas";
         static string extra = "";
+        static int aantal = 1;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             textBlockBestelling.TextWrapping = TextWrapping.Wrap;
-            textBlockBestelling.Text = "U heeft 1 " + grootte + " pizza('s') besteld met " + ingrediënten + " 4";
+            textBlockBestelling.Text = "U heeft " + aantal + " " + grootte + " pizza('s') besteld met "
+                + ingrediënten + extra;
         }
 
         private void Grootte_Checked(object sender, RoutedEventArgs e)
@@ -95,11 +97,52 @@ namespace OefeningBestelbonPizza
         private void ToggleButton_Checked(object sender, RoutedEventArgs e)
         {
             //ToggleButton knop = (ToggleButton)sender;
+            extra = "";
             List<string> extraLijst = new List<string>();
             if (ExtraKorstToggleButton.IsChecked == true)
             {
-                extraLijst.Add("extra dikke korst");
+                extraLijst.Add(" met extra dikke korst ");
             }
+            if (ExtraKaasToggleButton.IsChecked == true)
+            {
+                extraLijst.Add(" overstrooid met extra kaas ");
+            }
+            if (extraLijst.Count() > 1)
+            {
+                for (int i = 0; i < extraLijst.Count() - 1; i++)
+                {
+                    extra += extraLijst[i] + ", ";
+                }
+                extra = extra.Substring(0, extra.Length - 2);
+                extra += "en" + extraLijst[extraLijst.Count() - 1];
+            }
+            else if (extraLijst.Count() == 1)
+            {
+                extra += extraLijst[0];
+            }
+            else
+            {
+                extra = "";
+            }
+            extraLijst.Clear();
+        }
+
+        private void ButtonPlus_Click(object sender, RoutedEventArgs e)
+        {
+            if (aantal < 10)
+            {
+                aantal += 1;
+            }
+            Aantal.Content = aantal;
+        }
+
+        private void ButtonMin_Click(object sender, RoutedEventArgs e)
+        {
+            if (aantal > 1)
+            {
+                aantal -= 1;
+            }
+            Aantal.Content = aantal;
         }
     }
 }
