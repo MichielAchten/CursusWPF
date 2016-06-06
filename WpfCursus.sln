@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonGebruikWindow", "Butt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefeningBestelbonPizza", "OefeningBestelbonPizza\OefeningBestelbonPizza.csproj", "{6C327F1A-05DF-45EF-B9C1-20ECBD344688}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HobbyLijst", "HobbyLijst\HobbyLijst.csproj", "{AC687D81-C9CE-4BE4-AEA9-D100287B12F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{6C327F1A-05DF-45EF-B9C1-20ECBD344688}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C327F1A-05DF-45EF-B9C1-20ECBD344688}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C327F1A-05DF-45EF-B9C1-20ECBD344688}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC687D81-C9CE-4BE4-AEA9-D100287B12F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC687D81-C9CE-4BE4-AEA9-D100287B12F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC687D81-C9CE-4BE4-AEA9-D100287B12F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC687D81-C9CE-4BE4-AEA9-D100287B12F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
