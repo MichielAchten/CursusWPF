@@ -43,5 +43,6 @@
             </ListBox>
             <Button Name="ButtonVerwijderen" Height="20" Width="150" VerticalAlignment="Top" Margin="10" Click="ButtonVerwijderen_Click">Verwijderen</Button>
         </StackPanel>
+        <Button Name="ButtonSamenvatting" Margin="10" Click="ButtonSamenvatting_Click">Samenvatting</Button>
     </StackPanel>
 </Window>
