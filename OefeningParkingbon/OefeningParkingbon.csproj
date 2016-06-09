@@ -60,8 +60,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OefeningParkingbon.xaml.cs">
-      <DependentUpon>OefeningParkingbon.xaml</DependentUpon>
+    <Compile Include="ParkingBonWindow.xaml.cs">
+      <DependentUpon>ParkingBonWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -90,7 +90,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="OefeningParkingbon.xaml">
+    <Page Include="ParkingBonWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
