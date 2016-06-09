@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OefeningParkingbon.Properties
+namespace ParkingBon.Properties
 {
 
 

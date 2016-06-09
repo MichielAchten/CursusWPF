@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCursus", "WpfCursus\WpfCursus.csproj", "{C4F7FF4B-CBC4-420F-9A2D-2767935925A5}"
 EndProject
@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telefoon", "TelefoonWindow\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bars", "Bars\Bars.csproj", "{BA7B7C67-CB57-4836-837C-BC17A5727E65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefeningParkingbon", "OefeningParkingbon\OefeningParkingbon.csproj", "{0D86D09D-BB59-49D4-9962-421EFE5B3B68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingBon", "ParkingBon\ParkingBon.csproj", "{F5483810-AC8B-43EE-BA1A-698F8CC11A78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,10 +59,10 @@ Global
 		{BA7B7C67-CB57-4836-837C-BC17A5727E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA7B7C67-CB57-4836-837C-BC17A5727E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA7B7C67-CB57-4836-837C-BC17A5727E65}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D86D09D-BB59-49D4-9962-421EFE5B3B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D86D09D-BB59-49D4-9962-421EFE5B3B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D86D09D-BB59-49D4-9962-421EFE5B3B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D86D09D-BB59-49D4-9962-421EFE5B3B68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5483810-AC8B-43EE-BA1A-698F8CC11A78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5483810-AC8B-43EE-BA1A-698F8CC11A78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5483810-AC8B-43EE-BA1A-698F8CC11A78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5483810-AC8B-43EE-BA1A-698F8CC11A78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
