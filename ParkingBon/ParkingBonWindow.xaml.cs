@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.ComponentModel;
+using System.IO;
+using Microsoft.Win32;
 
 namespace ParkingBon
 {
@@ -25,6 +28,10 @@ namespace ParkingBon
         {
             InitializeComponent();
             Nieuw();
+            MenuBonAfdrukken.IsEnabled = false;
+            MenuBonOplsaan.IsEnabled = false;
+            ButtonAfdrukken.IsEnabled = false;
+            ButtonOpslaan.IsEnabled = false;
         }
         private void Nieuw()
         {
@@ -62,6 +69,52 @@ namespace ParkingBon
             VertrekLabelTijd.Content =
             Convert.ToDateTime(AankomstLabelTijd.Content).AddHours(0.5 *
             bedrag).ToLongTimeString();
+        }
+
+        private void SaveExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            try
+            {
+                SaveFileDialog dlg = new SaveFileDialog();
+                dlg.FileName = "ParkingBon";
+                dlg.DefaultExt = ".txt";
+                dlg.Filter = "Text documents |*.txt";
+
+                if (dlg.ShowDialog() == true)
+                {
+                    using (StreamWriter bestand = new StreamWriter(dlg.FileName))
+                    {
+                        bestand.WriteLine();
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("opslaan mislukt : ", ex.Message);
+            }
+        }
+
+        private void OpenExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            try
+            {
+                OpenFileDialog dlg = new OpenFileDialog();
+                dlg.FileName = "ParkingBon";
+                dlg.DefaultExt = ".txt";
+                dlg.Filter = "Text document |*.txt";
+
+                if (dlg.ShowDialog() == true)
+                {
+                    using (StreamReader bestand = new StreamReader(dlg.FileName))
+                    {
+                        
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("openen mislukt : " + ex.Message);
+            }
         }
     }
 }
