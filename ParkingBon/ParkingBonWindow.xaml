@@ -4,54 +4,54 @@
         xmlns:custom="clr-namespace:ParkingBon"
         Title="Parking Bon" Height="379" Width="525" Closing="Window_Closing">
     <Window.CommandBindings>
-        <CommandBinding Command="New" Executed="NewExexuted"></CommandBinding>
-        <CommandBinding Command="Open" Executed="OpenExexuted"></CommandBinding>
+        <CommandBinding Command="New" Executed="NewExecuted"></CommandBinding>
+        <CommandBinding Command="Open" Executed="OpenExecuted"></CommandBinding>
         <CommandBinding Command="Save" Executed="SaveExecuted"></CommandBinding>
-        <CommandBinding Command="Print" Executed="PrintExexuted"></CommandBinding>
-        <CommandBinding Command="Close" Executed="CloseExexuted"></CommandBinding>
+        <CommandBinding Command="PrintPreview" Executed="PrintPreviewExecuted"></CommandBinding>
+        <CommandBinding Command="Close" Executed="CloseExecuted"></CommandBinding>
     </Window.CommandBindings>
     <DockPanel >
         <Menu Height="24" DockPanel.Dock="Top">
             <MenuItem Header="Bon operaties">
                 <MenuItem Name="MenuNieuweBon" Header="Nieuwe Bon" Command="New"></MenuItem>
                 <MenuItem Name="MenuBonOpenen" Header="Bon openen" Command="Open"></MenuItem>
-                <MenuItem Name="MenuBonOplsaan" Header="Bon opslaan" Command="Save"></MenuItem>
-                <MenuItem Name="MenuBonAfdrukken" Header="Bon Afdrukken" Command="Print"></MenuItem>
+                <MenuItem Name="MenuBonOplsaan" IsEnabled="False" Header="Bon opslaan" Command="Save"></MenuItem>
+                <MenuItem Name="MenuAfdrukVoorbeeld" IsEnabled="False" Header="Afdrukvoorbeeld" Command="PrintPreview"></MenuItem>
                 <Separator></Separator>
                 <MenuItem Name="MenuAfsluiten" Header="Afsluiten" Command="Close"></MenuItem>
             </MenuItem>
         </Menu>
         <ToolBar Height="60" DockPanel.Dock="Top">
-            <Button>
-                <StackPanel Name="ButtonNieuw" Background="white">
+            <Button Name="ButtonNieuw" Command="New">
+                <StackPanel Background="white">
                     <Image Source="C:\Users\Michiel\Documents\Visual Studio 2013\Projects\CursusWPF\Parkingbon\Images\new.jpg"
                            Height="30"></Image>
                     <Label Content="Nieuw" FontSize="10"></Label>
                 </StackPanel>
             </Button>
-            <Button>
-                <StackPanel Name="ButtonOpenen" Background="white">
+            <Button Name="ButtonOpenen" Command="Open">
+                <StackPanel Background="white">
                     <Image Source="C:\Users\Michiel\Documents\Visual Studio 2013\Projects\CursusWPF\Parkingbon\Images\open.jpg"
                            Height="30"></Image>
                     <Label Content="Openen" FontSize="10"></Label>
                 </StackPanel>
             </Button>
-            <Button>
-                <StackPanel Name="ButtonOpslaan" Background="white">
+            <Button Name="ButtonOpslaan" Command="Save" IsEnabled="False">
+                <StackPanel Background="white">
                     <Image Source="C:\Users\Michiel\Documents\Visual Studio 2013\Projects\CursusWPF\Parkingbon\Images\save.jpg"
                            Height="30"></Image>
                     <Label Content="Opslaan" FontSize="10"></Label>
                 </StackPanel>
             </Button>
-            <Button>
-                <StackPanel Name="ButtonAfdrukken" Background="white">
+            <Button Name="ButtonAfdrukvoorbeeld" Command="PrintPreview" IsEnabled="False">
+                <StackPanel Background="white">
                     <Image Source="C:\Users\Michiel\Documents\Visual Studio 2013\Projects\CursusWPF\Parkingbon\Images\print.jpg"
                            Height="30"></Image>
-                    <Label Content="Afdrukken" FontSize="10"></Label>
+                    <Label Content="Afdrukvoorbeeld" FontSize="10"></Label>
                 </StackPanel>
             </Button>
-            <Button>
-                <StackPanel Name="ButtonAfsluiten" Background="white">
+            <Button Name="ButtonAfsluiten" Command="Close">
+                <StackPanel Background="white">
                     <Image Source="C:\Users\Michiel\Documents\Visual Studio 2013\Projects\CursusWPF\Parkingbon\Images\close.jpg"
                            Height="30"></Image>
                     <Label Content="Afsluiten" FontSize="10"></Label>
