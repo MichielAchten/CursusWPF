@@ -37,7 +37,18 @@ namespace ParkingBon
             AankomstLabelTijd.Content = DateTime.Now.ToLongTimeString();
             TeBetalenLabel.Content = "0 €";
             VertrekLabelTijd.Content = AankomstLabelTijd.Content;
+            StatusItem.Content = "nieuwe bon";
+            SaveEnAfdruk(false);
         }
+
+        private void SaveEnAfdruk(bool actief)
+        {
+            ButtonAfdrukvoorbeeld.IsEnabled = actief;
+            ButtonOpslaan.IsEnabled = actief;
+            MenuAfdrukVoorbeeld.IsEnabled = actief;
+            MenuBonOplsaan.IsEnabled = actief;
+        }
+
         private void Window_Closing(object sender,
         System.ComponentModel.CancelEventArgs e)
         {
@@ -48,6 +59,7 @@ namespace ParkingBon
                 e.Cancel = true;
             }
         }
+
         private void minder_Click(object sender, RoutedEventArgs e)
         {
             int bedrag = Convert.ToInt32(TeBetalenLabel.Content.ToString().Replace("€", ""));
@@ -66,8 +78,8 @@ namespace ParkingBon
             VertrekLabelTijd.Content =
             Convert.ToDateTime(AankomstLabelTijd.Content).AddHours(0.5 *
             bedrag).ToLongTimeString();
-
         }
+
         private void meer_Click(object sender, RoutedEventArgs e)
         {
             int bedrag = Convert.ToInt32(TeBetalenLabel.Content.ToString().Replace("€", ""));
@@ -87,30 +99,9 @@ namespace ParkingBon
             MenuBonOplsaan.IsEnabled = true;
         }
 
-        private void SaveExecuted(object sender, ExecutedRoutedEventArgs e)
+        private void NewExecuted(object sender, ExecutedRoutedEventArgs e)
         {
-            try
-            {
-                SaveFileDialog dlg = new SaveFileDialog();
-                dlg.FileName = "ParkingBon";
-                dlg.DefaultExt = ".txt";
-                dlg.Filter = "Text documents |*.txt";
-
-                if (dlg.ShowDialog() == true)
-                {
-                    using (StreamWriter bestand = new StreamWriter(dlg.FileName))
-                    {
-                        bestand.WriteLine(DatumBon.ToString());
-                        bestand.WriteLine(AankomstLabelTijd.Content.ToString());
-                        bestand.WriteLine(TeBetalenLabel.Content.ToString());
-                        bestand.WriteLine(VertrekLabelTijd.Content.ToString());
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("opslaan mislukt : ", ex.Message);
-            }
+            Nieuw();
         }
 
         private void OpenExecuted(object sender, ExecutedRoutedEventArgs e)
@@ -118,21 +109,55 @@ namespace ParkingBon
             try
             {
                 OpenFileDialog dlg = new OpenFileDialog();
-                dlg.FileName = "ParkingBon";
-                dlg.DefaultExt = ".txt";
-                dlg.Filter = "Text document |*.txt";
+                //dlg.FileName = "ParkingBon";
+                //dlg.DefaultExt = ".txt";
+                dlg.Filter = "Parkeerbonnen |*.txt";
 
                 if (dlg.ShowDialog() == true)
                 {
-                    using (StreamReader bestand = new StreamReader(dlg.FileName))
+                    using (StreamReader invoer = new StreamReader(dlg.FileName))
                     {
-
+                        DatumBon.SelectedDate = Convert.ToDateTime(invoer.ReadLine());
+                        AankomstLabelTijd.Content = invoer.ReadLine();
+                        TeBetalenLabel.Content = invoer.ReadLine();
+                        VertrekLabelTijd.Content = invoer.ReadLine();
                     }
+                    StatusItem.Content = dlg.FileName;
+                    SaveEnAfdruk(true);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("openen mislukt : " + ex.Message);
+            }
+        }
+
+        private void SaveExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            try
+            {
+                SaveFileDialog dlg = new SaveFileDialog();
+                DateTime tijd = (DateTime)DatumBon.SelectedDate;
+                dlg.FileName = tijd.Day.ToString() + "-" + tijd.Month.ToString() + "-" + tijd.Year.ToString() +
+                    "om" + AankomstLabelTijd.Content.ToString().Replace(":", "-");
+                dlg.DefaultExt = ".bon";
+                dlg.Filter = "Parkeerbonnen |*.bon";
+
+                if (dlg.ShowDialog() == true)
+                {
+                    using (StreamWriter uitvoer = new StreamWriter(dlg.FileName))
+                    {
+                        uitvoer.WriteLine(tijd.ToShortTimeString());
+                        uitvoer.WriteLine(AankomstLabelTijd.Content);
+                        uitvoer.WriteLine(TeBetalenLabel.Content);
+                        uitvoer.WriteLine(VertrekLabelTijd.Content);
+                    }
+                    StatusItem.Content = dlg.FileName;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("opslaan mislukt : ", ex.Message);
             }
         }
 
@@ -173,19 +198,6 @@ namespace ParkingBon
             preview.Owner = this;
             preview.AfdrukDocument = StelAfdrukSamen();
             preview.ShowDialog();
-        }
-
-        private void NewExecuted(object sender, ExecutedRoutedEventArgs e)
-        {
-            if (MessageBox.Show("Niew programma openen?", "Nieuw",
-            MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No) ==
-            MessageBoxResult.Yes)
-            {
-                DatumBon.SelectedDate = DateTime.Now;
-                AankomstLabelTijd.Content = DateTime.Now.ToLongTimeString();
-                TeBetalenLabel.Content = "0 €";
-                VertrekLabelTijd.Content = AankomstLabelTijd.Content;
-            }
         }
 
         private void CloseExecuted(object sender, ExecutedRoutedEventArgs e)

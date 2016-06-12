@@ -11,55 +11,58 @@
         <CommandBinding Command="Close" Executed="CloseExecuted"></CommandBinding>
     </Window.CommandBindings>
     <DockPanel >
-        <Menu Height="24" DockPanel.Dock="Top">
+        <Menu Height="24" Name="MenuBalk" DockPanel.Dock="Top">
             <MenuItem Header="Bon operaties">
-                <MenuItem Name="MenuNieuweBon" Header="Nieuwe Bon" Command="New"></MenuItem>
-                <MenuItem Name="MenuBonOpenen" Header="Bon openen" Command="Open"></MenuItem>
-                <MenuItem Name="MenuBonOplsaan" IsEnabled="False" Header="Bon opslaan" Command="Save"></MenuItem>
-                <MenuItem Name="MenuAfdrukVoorbeeld" IsEnabled="False" Header="Afdrukvoorbeeld" Command="PrintPreview"></MenuItem>
+                <MenuItem Name="MenuOperaties" Header="Bon Operaties" FontSize="14"></MenuItem>
+                <MenuItem Name="MenuNieuweBon" Header="Nieuwe Bo_n" Command="New" FontSize="14"></MenuItem>
+                <MenuItem Name="MenuBonOpenen" Header="Bon _openen" Command="Open" FontSize="14"></MenuItem>
+                <MenuItem Name="MenuBonOplsaan" IsEnabled="False" Header="Bon op_slaan" Command="Save" FontSize="14"></MenuItem>
+                <MenuItem Name="MenuAfdrukVoorbeeld" IsEnabled="False" Header="Afdrukvoorbeeld" Command="PrintPreview" FontSize="14"></MenuItem>
                 <Separator></Separator>
-                <MenuItem Name="MenuAfsluiten" Header="Afsluiten" Command="Close"></MenuItem>
+                <MenuItem Name="MenuAfsluiten" Header="Afsluiten" Command="Close" FontSize="14"></MenuItem>
             </MenuItem>
         </Menu>
-        <ToolBar Height="60" DockPanel.Dock="Top">
-            <Button Name="ButtonNieuw" Command="New">
-                <StackPanel Background="white">
-                    <Image Source="C:\Users\Michiel\Documents\Visual Studio 2013\Projects\CursusWPF\Parkingbon\Images\new.jpg"
-                           Height="30"></Image>
-                    <Label Content="Nieuw" FontSize="10"></Label>
-                </StackPanel>
-            </Button>
-            <Button Name="ButtonOpenen" Command="Open">
-                <StackPanel Background="white">
-                    <Image Source="C:\Users\Michiel\Documents\Visual Studio 2013\Projects\CursusWPF\Parkingbon\Images\open.jpg"
-                           Height="30"></Image>
-                    <Label Content="Openen" FontSize="10"></Label>
-                </StackPanel>
-            </Button>
-            <Button Name="ButtonOpslaan" Command="Save" IsEnabled="False">
-                <StackPanel Background="white">
-                    <Image Source="C:\Users\Michiel\Documents\Visual Studio 2013\Projects\CursusWPF\Parkingbon\Images\save.jpg"
-                           Height="30"></Image>
-                    <Label Content="Opslaan" FontSize="10"></Label>
-                </StackPanel>
-            </Button>
-            <Button Name="ButtonAfdrukvoorbeeld" Command="PrintPreview" IsEnabled="False">
-                <StackPanel Background="white">
-                    <Image Source="C:\Users\Michiel\Documents\Visual Studio 2013\Projects\CursusWPF\Parkingbon\Images\print.jpg"
-                           Height="30"></Image>
-                    <Label Content="Afdrukvoorbeeld" FontSize="10"></Label>
-                </StackPanel>
-            </Button>
-            <Button Name="ButtonAfsluiten" Command="Close">
-                <StackPanel Background="white">
-                    <Image Source="C:\Users\Michiel\Documents\Visual Studio 2013\Projects\CursusWPF\Parkingbon\Images\close.jpg"
-                           Height="30"></Image>
-                    <Label Content="Afsluiten" FontSize="10"></Label>
-                </StackPanel>
-            </Button>
-        </ToolBar>
-        <StatusBar DockPanel.Dock="Bottom">
-            <Label Content="nieuwe bon"></Label>
+        <ToolBarTray  Height="60" DockPanel.Dock="Top">
+            <ToolBar Name="ToolBarOperaties">
+                <Button Name="ButtonNieuw" Command="New">
+                    <StackPanel>
+                        <Image Source="C:\Users\Michiel\Documents\Visual Studio 2013\Projects\CursusWPF\Parkingbon\Images\new.jpg"
+                           Height="32" Width="32" Stretch="Fill"></Image>
+                        <Label Content="Nieuw" FontSize="10"></Label>
+                    </StackPanel>
+                </Button>
+                <Button Name="ButtonOpenen" Command="Open">
+                    <StackPanel>
+                        <Image Source="C:\Users\Michiel\Documents\Visual Studio 2013\Projects\CursusWPF\Parkingbon\Images\open.jpg"
+                           Height="32" Width="32" Stretch="Fill"></Image>
+                        <Label Content="Openen" FontSize="10"></Label>
+                    </StackPanel>
+                </Button>
+                <Button Name="ButtonOpslaan" Command="Save" IsEnabled="False">
+                    <StackPanel>
+                        <Image Source="C:\Users\Michiel\Documents\Visual Studio 2013\Projects\CursusWPF\Parkingbon\Images\save.jpg"
+                           Height="32" Width="32" Stretch="Fill"></Image>
+                        <Label Content="Opslaan" FontSize="10"></Label>
+                    </StackPanel>
+                </Button>
+                <Button Name="ButtonAfdrukvoorbeeld" Command="PrintPreview" IsEnabled="False">
+                    <StackPanel>
+                        <Image Source="C:\Users\Michiel\Documents\Visual Studio 2013\Projects\CursusWPF\Parkingbon\Images\print.jpg"
+                           Height="32" Width="32" Stretch="Fill"></Image>
+                        <Label Content="Afdrukvoorbeeld" FontSize="10"></Label>
+                    </StackPanel>
+                </Button>
+                <Button Name="ButtonAfsluiten" Command="Close">
+                    <StackPanel>
+                        <Image Source="C:\Users\Michiel\Documents\Visual Studio 2013\Projects\CursusWPF\Parkingbon\Images\close.jpg"
+                           Height="32" Width="32" Stretch="Fill"></Image>
+                        <Label Content="Afsluiten" FontSize="10"></Label>
+                    </StackPanel>
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+        <StatusBar Name="BonStatus" DockPanel.Dock="Bottom" Height="24">
+            <StatusBarItem Name="StatusItem"></StatusBarItem>
         </StatusBar>
         <Grid Margin="20">
             <Grid.RowDefinitions>
