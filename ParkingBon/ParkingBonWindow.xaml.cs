@@ -78,6 +78,7 @@ namespace ParkingBon
             VertrekLabelTijd.Content =
             Convert.ToDateTime(AankomstLabelTijd.Content).AddHours(0.5 *
             bedrag).ToLongTimeString();
+            SaveEnAfdruk(!(bedrag == 0));
         }
 
         private void meer_Click(object sender, RoutedEventArgs e)
@@ -97,6 +98,7 @@ namespace ParkingBon
             ButtonOpslaan.IsEnabled = true;
             MenuAfdrukVoorbeeld.IsEnabled = true;
             MenuBonOplsaan.IsEnabled = true;
+            SaveEnAfdruk(!(bedrag == 0));
         }
 
         private void NewExecuted(object sender, ExecutedRoutedEventArgs e)
@@ -109,9 +111,7 @@ namespace ParkingBon
             try
             {
                 OpenFileDialog dlg = new OpenFileDialog();
-                //dlg.FileName = "ParkingBon";
-                //dlg.DefaultExt = ".txt";
-                dlg.Filter = "Parkeerbonnen |*.txt";
+                dlg.Filter = "Parkeerbonnen |*.bon";
 
                 if (dlg.ShowDialog() == true)
                 {
@@ -160,48 +160,50 @@ namespace ParkingBon
                 MessageBox.Show("opslaan mislukt : ", ex.Message);
             }
         }
-
-        private double A4breedte = 21 / 2.54 * 96;
-        private double A4hoogte = 29.7 / 2.54 * 96;
+        
         private double vertPositie;
-        private FixedDocument StelAfdrukSamen()
+
+        private void PrintPreviewExecuted(object sender, ExecutedRoutedEventArgs e)
         {
             FixedDocument document = new FixedDocument();
-            document.DocumentPaginator.PageSize =
-            new System.Windows.Size(A4breedte, A4hoogte);
+            document.DocumentPaginator.PageSize = new Size(640, 320);
             PageContent inhoud = new PageContent();
             document.Pages.Add(inhoud);
             FixedPage page = new FixedPage();
             inhoud.Child = page;
-            page.Width = A4breedte;
-            page.Height = A4hoogte;
+
+            page.Width = 640;
+            page.Height = 320;
+            Image logo = new Image();
+            logo.Source = logoImage.Source;
+            logo.Margin = new Thickness(96);
+            page.Children.Add(logo);
             vertPositie = 96;
-            page.Children.Add(Regel(DatumBon.ToString()));
-            page.Children.Add(Regel(AankomstLabelTijd.Content.ToString()));
-            page.Children.Add(Regel(TeBetalenLabel.Content.ToString()));
-            page.Children.Add(Regel(VertrekLabelTijd.Content.ToString()));
+            page.Children.Add(Regel("datum: " + DatumBon.Text));
+            page.Children.Add(Regel("starttijd: " + AankomstLabelTijd.Content));
+            page.Children.Add(Regel("eindtijd: " + VertrekLabelTijd.Content));
+            page.Children.Add(Regel("bedrag betaald: " + TeBetalenLabel.Content));
 
-            return document;
-        }
-        private TextBlock Regel(string tekst)
-        {
-            TextBlock deRegel = new TextBlock();
-            deRegel.Text = tekst;
-            deRegel.Margin = new Thickness(96, vertPositie, 96, 96);
-            vertPositie += 30;
-            return deRegel;
-        }
-
-        private void PrintPreviewExecuted(object sender, ExecutedRoutedEventArgs e)
-        {
             Afdrukvoorbeeld preview = new Afdrukvoorbeeld();
             preview.Owner = this;
-            preview.AfdrukDocument = StelAfdrukSamen();
+            preview.AfdrukDocument = document;
             preview.ShowDialog();
         }
 
+        private TextBlock Regel(string tekst)
+        {
+            TextBlock deRegel = new TextBlock();
+            deRegel.Margin = new Thickness(300, vertPositie, 96, 96);
+            deRegel.FontSize = 18;
+            vertPositie += 36;
+            deRegel.Text = tekst;
+            return deRegel;
+        }
+
         private void CloseExecuted(object sender, ExecutedRoutedEventArgs e)
-        { this.Close(); }
+        { 
+            this.Close(); 
+        }
     }
 }
 
