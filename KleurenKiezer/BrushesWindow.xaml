@@ -6,7 +6,7 @@
         <Color x:Key="paarsColor" A="255" R="170" G="40" B="165"></Color>
         <SolidColorBrush x:Key="paarsBrush" Color="{StaticResource paarsColor}"></SolidColorBrush>
     </Window.Resources>
-    <StackPanel Background="{StaticResource turquoiseBrush}">
+    <StackPanel Background="{StaticResource rainbowLineair}">
         
     </StackPanel>
 </Window>
