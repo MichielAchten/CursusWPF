@@ -3,6 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="BrushesWindow.xaml">
     <Application.Resources>
-        <ResourceDictionary Source="C:\Users\Michiel\Documents\Visual Studio 2013\Projects\CursusWPF\ParkingBon\Resources\turquoise.xaml"></ResourceDictionary>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="C:\Users\Michiel\Documents\Visual Studio 2013\Projects\CursusWPF\KleurenKiezer\Resources\turquoise.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="C:\Users\Michiel\Documents\Visual Studio 2013\Projects\CursusWPF\KleurenKiezer\Resources\regenboog.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
