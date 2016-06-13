@@ -1,0 +1,12 @@
+﻿<Window x:Class="Brushes.BrushesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BrushesWindow" Height="160" Width="210">
+    <Window.Resources>
+        <Color x:Key="paarsColor" A="255" R="170" G="40" B="165"></Color>
+        <SolidColorBrush x:Key="paarsBrush" Color="{StaticResource paarsColor}"></SolidColorBrush>
+    </Window.Resources>
+    <StackPanel Background="{StaticResource turquoiseBrush}">
+        
+    </StackPanel>
+</Window>

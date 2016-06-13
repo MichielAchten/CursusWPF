@@ -1,0 +1,8 @@
+﻿<Application x:Class="KleurenKiezer.BrushesWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="BrushesWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary Source="C:\Users\Michiel\Documents\Visual Studio 2013\Projects\CursusWPF\ParkingBon\Resources\turquoise.xaml"></ResourceDictionary>
+    </Application.Resources>
+</Application>
