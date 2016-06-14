@@ -6,7 +6,13 @@
         <Color x:Key="paarsColor" A="255" R="170" G="40" B="165"></Color>
         <SolidColorBrush x:Key="paarsBrush" Color="{StaticResource paarsColor}"></SolidColorBrush>
     </Window.Resources>
-    <StackPanel Background="{StaticResource rainbowLineair}">
-        
-    </StackPanel>
+    <DockPanel>
+        <StackPanel Name="PanelMetKnop" Margin="5,0">
+            <ToggleButton Name="VergrootButton" Background="Orange" Height="60" Width="125" Content="Vergroot"
+                          Click="VergrootButton_Click"></ToggleButton>
+            <TextBox Height="50" Width="125" Margin="0,5">hier kan je iets tikken</TextBox>
+        </StackPanel>
+        <Rectangle Name="Vergroting" Height="400" Width="500" HorizontalAlignment="Left" VerticalAlignment="Top">
+        </Rectangle>
+    </DockPanel>
 </Window>
