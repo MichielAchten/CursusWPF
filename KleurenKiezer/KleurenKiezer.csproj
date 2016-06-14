@@ -66,6 +66,10 @@
       <DependentUpon>BrushesWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="KleurenKiezenWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\regenboog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -76,6 +80,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KleurenKiezenWindow.xaml.cs">
+      <DependentUpon>KleurenKiezenWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
