@@ -74,12 +74,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Resources\standaardStijlen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\turquoise.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Kleur.cs" />
     <Compile Include="KleurenKiezenWindow.xaml.cs">
       <DependentUpon>KleurenKiezenWindow.xaml</DependentUpon>
     </Compile>
