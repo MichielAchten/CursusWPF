@@ -95,6 +95,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\atletiek.jpg" />
+    <Resource Include="images\basketbal.jpg" />
+    <Resource Include="images\drum.jpg" />
+    <Resource Include="images\gitaar.jpg" />
+    <Resource Include="images\piano.jpg" />
+    <Resource Include="images\tennis.jpg" />
+    <Resource Include="images\trompet.jpg" />
+    <Resource Include="images\turnen.jpg" />
+    <Resource Include="images\voetbal.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
