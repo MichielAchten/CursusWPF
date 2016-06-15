@@ -5,9 +5,10 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources\turquoise.xaml"></ResourceDictionary>
-                <ResourceDictionary Source="Resources\regenboog.xaml"></ResourceDictionary>
-                <ResourceDictionary Source="Resources\standaardStijlen.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/turquoise.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/regenboog.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/standaardStijlen.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/ShinyRed.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

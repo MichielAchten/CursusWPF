@@ -4,7 +4,7 @@
         <Setter Property="Background" Value="Cyan"></Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="Red"></Setter>
+                <Setter Property="Foreground" Value="Red"></Setter>
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -17,5 +17,32 @@
     </Style>
     <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource baseControlStijl}">
         <Setter Property="Foreground" Value="Blue"></Setter>
+    </Style>
+    <Style TargetType="{x:Type Slider}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Slider}">
+                    <Grid>
+                        <Border Height="8" CornerRadius="8" Background="{StaticResource zwartwit}"></Border>
+                        <Track Name="Part_Track">
+                            <Track.Thumb>
+                                <Thumb Height="20" Width="10"></Thumb>
+                            </Track.Thumb>
+                        </Track>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="{x:Type Thumb}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Canvas Width="16" Height="16">
+                        <Ellipse Width="16" Height="16" Fill="{StaticResource zwartwit}" Stroke="Black"></Ellipse>
+                    </Canvas>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 </ResourceDictionary>

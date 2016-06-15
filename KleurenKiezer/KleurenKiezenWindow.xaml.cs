@@ -59,14 +59,14 @@ namespace KleurenKiezer
                         comboBoxKleuren.SelectedItem = kleurNaam;
                     }
                 }
-                if ((radioAchtergrond.IsChecked == true) && (comboBoxKleuren.SelectedIndex >= 0))
-                {
-                    Kleur gekozenKleur = (Kleur)comboBoxKleuren.SelectedItem;
-                    panelVoorbeeld.Background = gekozenKleur.Borstel;
-                    sliderRed.Value = gekozenKleur.Rood;
-                    sliderGreen.Value = gekozenKleur.Groen;
-                    sliderBlue.Value = gekozenKleur.Blauw;
-                }
+            }
+            if ((radioAchtergrond.IsChecked == true) && (comboBoxKleuren.SelectedIndex >= 0))
+            {
+                Kleur gekozenKleur = (Kleur)comboBoxKleuren.SelectedItem;
+                panelVoorbeeld.Background = gekozenKleur.Borstel;
+                sliderRed.Value = gekozenKleur.Rood;
+                sliderGreen.Value = gekozenKleur.Groen;
+                sliderBlue.Value = gekozenKleur.Blauw;
             }
         }
     }

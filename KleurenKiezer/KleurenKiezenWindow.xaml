@@ -2,7 +2,16 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Kleuren kiezen" Height="350" Width="525" Background="Gray">
-
+    
+    <Window.Resources>
+        <ControlTemplate x:Key="kleurknop" TargetType="{x:Type Button}">
+            <Grid Height="30" Width="80">
+                <Ellipse Height="30" Width="80" Fill="{StaticResource zwartwit}" Stroke="Black"></Ellipse>
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+            </Grid>
+        </ControlTemplate>
+    </Window.Resources>
+    
     <StackPanel Orientation="Horizontal">
         <StackPanel Orientation="Vertical" Height="300" Width="300" Margin="0,10">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -26,13 +35,22 @@
                 <Slider Height="23" Name="sliderBlue" Width="100" Minimum="0" Maximum="255" Margin="10" SmallChange="1" IsSnapToTickEnabled="True" Value="0" />
                 <Label Name="labelBlue" VerticalAlignment="Center" Width="50" Content="{Binding ElementName=sliderBlue, Path=Value}" ></Label>
             </StackPanel>
-            <ComboBox Name="comboBoxKleuren" Margin="10,30" DisplayMemberPath="Naam" SelectedValuePath="Naam"></ComboBox>
+            <ComboBox Name="comboBoxKleuren" Margin="10,30">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Rectangle Fill="{Binding Path=Naam}" Stroke="Black" StrokeThickness="2" Height="25" Width="50"></Rectangle>
+                            <Label Content="{Binding Path=Naam}" Foreground="Black"></Label>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
             <StackPanel Orientation="Horizontal">
                 <StackPanel>
                     <RadioButton Name="radioVoorgrond" Content="Voorgrond in RGB" Margin="10" IsChecked="True"></RadioButton>
                     <RadioButton Name="radioAchtergrond" Content="Achtergrond in Colorname" Margin="10,0"></RadioButton>
                 </StackPanel>
-                <Button Name="buttonKleur" Margin="10" Height="30" Width="80" Content="Pas kleur toe" Click="buttonKleur_Click"></Button>
+                <Button Name="buttonKleur" Content="Pas kleur toe" Click="buttonKleur_Click" Template="{StaticResource kleurknop}"></Button>
             </StackPanel>
         </StackPanel>
         <StackPanel Height="300" Width="200" Name="panelVoorbeeld">
