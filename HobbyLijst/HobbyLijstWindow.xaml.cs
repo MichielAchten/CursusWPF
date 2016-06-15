@@ -29,25 +29,25 @@ namespace HobbyLijst
         public List<Hobby> hobbies = new List<Hobby>();
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            hobbies.Add(new Hobby("sport", "voetbal", new BitmapImage(new Uri(@"C:\Users\net04\Documents\Visual Studio 2013\Projects\WpfCursus\HobbyLijst\images\voetbal.jpg", UriKind.Absolute))));
-            hobbies.Add(new Hobby("sport", "atletiek", new BitmapImage(new Uri(@"C:\Users\net04\Documents\Visual Studio 2013\Projects\WpfCursus\HobbyLijst\images\atletiek.jpg", UriKind.Absolute))));
-            hobbies.Add(new Hobby("sport", "basketbal", new BitmapImage(new Uri(@"C:\Users\net04\Documents\Visual Studio 2013\Projects\WpfCursus\HobbyLijst\images\basketbal.jpg", UriKind.Absolute))));
-            hobbies.Add(new Hobby("sport", "tennis", new BitmapImage(new Uri(@"C:\Users\net04\Documents\Visual Studio 2013\Projects\WpfCursus\HobbyLijst\images\tennis.jpg", UriKind.Absolute))));
-            hobbies.Add(new Hobby("sport", "turnen", new BitmapImage(new Uri(@"C:\Users\net04\Documents\Visual Studio 2013\Projects\WpfCursus\HobbyLijst\images\turnen.jpg", UriKind.Absolute))));
-            hobbies.Add(new Hobby("muziek", "trompet", new BitmapImage(new Uri(@"C:\Users\net04\Documents\Visual Studio 2013\Projects\WpfCursus\HobbyLijst\images\trompet.jpg", UriKind.Absolute))));
-            hobbies.Add(new Hobby("muziek", "drum", new BitmapImage(new Uri(@"C:\Users\net04\Documents\Visual Studio 2013\Projects\WpfCursus\HobbyLijst\images\drum.jpg", UriKind.Absolute))));
-            hobbies.Add(new Hobby("muziek", "gitaar", new BitmapImage(new Uri(@"C:\Users\net04\Documents\Visual Studio 2013\Projects\WpfCursus\HobbyLijst\images\gitaar.jpg", UriKind.Absolute))));
-            hobbies.Add(new Hobby("muziek", "piano", new BitmapImage(new Uri(@"C:\Users\net04\Documents\Visual Studio 2013\Projects\WpfCursus\HobbyLijst\images\piano.jpg", UriKind.Absolute))));
+            //hobbies.Add(new Hobby("sport", "voetbal", new BitmapImage(new Uri(@"C:\Users\net04\Documents\Visual Studio 2013\Projects\WpfCursus\HobbyLijst\images\voetbal.jpg", UriKind.Absolute))));
+            //hobbies.Add(new Hobby("sport", "atletiek", new BitmapImage(new Uri(@"C:\Users\net04\Documents\Visual Studio 2013\Projects\WpfCursus\HobbyLijst\images\atletiek.jpg", UriKind.Absolute))));
+            //hobbies.Add(new Hobby("sport", "basketbal", new BitmapImage(new Uri(@"C:\Users\net04\Documents\Visual Studio 2013\Projects\WpfCursus\HobbyLijst\images\basketbal.jpg", UriKind.Absolute))));
+            //hobbies.Add(new Hobby("sport", "tennis", new BitmapImage(new Uri(@"C:\Users\net04\Documents\Visual Studio 2013\Projects\WpfCursus\HobbyLijst\images\tennis.jpg", UriKind.Absolute))));
+            //hobbies.Add(new Hobby("sport", "turnen", new BitmapImage(new Uri(@"C:\Users\net04\Documents\Visual Studio 2013\Projects\WpfCursus\HobbyLijst\images\turnen.jpg", UriKind.Absolute))));
+            //hobbies.Add(new Hobby("muziek", "trompet", new BitmapImage(new Uri(@"C:\Users\net04\Documents\Visual Studio 2013\Projects\WpfCursus\HobbyLijst\images\trompet.jpg", UriKind.Absolute))));
+            //hobbies.Add(new Hobby("muziek", "drum", new BitmapImage(new Uri(@"C:\Users\net04\Documents\Visual Studio 2013\Projects\WpfCursus\HobbyLijst\images\drum.jpg", UriKind.Absolute))));
+            //hobbies.Add(new Hobby("muziek", "gitaar", new BitmapImage(new Uri(@"C:\Users\net04\Documents\Visual Studio 2013\Projects\WpfCursus\HobbyLijst\images\gitaar.jpg", UriKind.Absolute))));
+            //hobbies.Add(new Hobby("muziek", "piano", new BitmapImage(new Uri(@"C:\Users\net04\Documents\Visual Studio 2013\Projects\WpfCursus\HobbyLijst\images\piano.jpg", UriKind.Absolute))));
 
-            //hobbies.Add(new Hobby("sport", "voetbal", new BitmapImage(new Uri(@"images\voetbal.jpg", UriKind.Absolute))));
-            //hobbies.Add(new Hobby("sport", "atletiek", new BitmapImage(new Uri(@"images\atletiek.jpg", UriKind.Relative))));
-            //hobbies.Add(new Hobby("sport", "basketbal", new BitmapImage(new Uri(@"images\basketbal.jpg", UriKind.Relative))));
-            //hobbies.Add(new Hobby("sport", "tennis", new BitmapImage(new Uri(@"images\tennis.jpg", UriKind.Relative))));
-            //hobbies.Add(new Hobby("sport", "turnen", new BitmapImage(new Uri(@"images\turnen.jpg", UriKind.Relative))));
-            //hobbies.Add(new Hobby("muziek", "trompet", new BitmapImage(new Uri(@"images\trompet.jpg", UriKind.Relative))));
-            //hobbies.Add(new Hobby("muziek", "drum", new BitmapImage(new Uri(@"images\drum.jpg", UriKind.Relative))));
-            //hobbies.Add(new Hobby("muziek", "gitaar", new BitmapImage(new Uri(@"images\gitaar.jpg", UriKind.Relative))));
-            //hobbies.Add(new Hobby("muziek", "piano", new BitmapImage(new Uri(@"images\piano.jpg", UriKind.Relative))));
+            hobbies.Add(new Hobby("sport", "voetbal", new BitmapImage(new Uri(@"images\voetbal.jpg", UriKind.Relative))));
+            hobbies.Add(new Hobby("sport", "atletiek", new BitmapImage(new Uri(@"images\atletiek.jpg", UriKind.Relative))));
+            hobbies.Add(new Hobby("sport", "basketbal", new BitmapImage(new Uri(@"images\basketbal.jpg", UriKind.Relative))));
+            hobbies.Add(new Hobby("sport", "tennis", new BitmapImage(new Uri(@"images\tennis.jpg", UriKind.Relative))));
+            hobbies.Add(new Hobby("sport", "turnen", new BitmapImage(new Uri(@"images\turnen.jpg", UriKind.Relative))));
+            hobbies.Add(new Hobby("muziek", "trompet", new BitmapImage(new Uri(@"images\trompet.jpg", UriKind.Relative))));
+            hobbies.Add(new Hobby("muziek", "drum", new BitmapImage(new Uri(@"images\drum.jpg", UriKind.Relative))));
+            hobbies.Add(new Hobby("muziek", "gitaar", new BitmapImage(new Uri(@"images\gitaar.jpg", UriKind.Relative))));
+            hobbies.Add(new Hobby("muziek", "piano", new BitmapImage(new Uri(@"images\piano.jpg", UriKind.Relative))));
 
             ComboBoxCategorie.Items.Add("- allecategorieën -");
             ComboBoxCategorie.Items.Add("muziek");
