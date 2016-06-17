@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingBon", "ParkingBon\Pa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KleurenKiezer", "KleurenKiezer\KleurenKiezer.csproj", "{39C5E134-6488-4453-8349-5BCD86B19640}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding", "DataBinding\DataBinding.csproj", "{5AD80915-031A-4FD0-BB9E-4F2CDA9EC974}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding", "DataBinding\DataBinding.csproj", "{3D8B19BB-0254-4B27-8DE9-A6D752531955}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,10 +71,10 @@ Global
 		{39C5E134-6488-4453-8349-5BCD86B19640}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39C5E134-6488-4453-8349-5BCD86B19640}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39C5E134-6488-4453-8349-5BCD86B19640}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5AD80915-031A-4FD0-BB9E-4F2CDA9EC974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5AD80915-031A-4FD0-BB9E-4F2CDA9EC974}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5AD80915-031A-4FD0-BB9E-4F2CDA9EC974}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5AD80915-031A-4FD0-BB9E-4F2CDA9EC974}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D8B19BB-0254-4B27-8DE9-A6D752531955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D8B19BB-0254-4B27-8DE9-A6D752531955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D8B19BB-0254-4B27-8DE9-A6D752531955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D8B19BB-0254-4B27-8DE9-A6D752531955}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
