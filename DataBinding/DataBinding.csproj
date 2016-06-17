@@ -63,6 +63,9 @@
     <Compile Include="DataBindingWindow.xaml.cs">
       <DependentUpon>DataBindingWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Persoon.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
