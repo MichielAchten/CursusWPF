@@ -96,6 +96,36 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\App48.png" />
+    <Resource Include="Images\Bestand64.png" />
+    <Resource Include="Images\Black48.png" />
+    <Resource Include="Images\Blue48.png" />
+    <Resource Include="Images\bold.png" />
+    <Resource Include="Images\Close64.png" />
+    <Resource Include="Images\Green48.png" />
+    <Resource Include="Images\Help16.png" />
+    <Resource Include="Images\Help64.png" />
+    <Resource Include="Images\italic.png" />
+    <Resource Include="Images\Kleur64.png" />
+    <Resource Include="Images\New16.png" />
+    <Resource Include="Images\Open16.png" />
+    <Resource Include="Images\Open64.png" />
+    <Resource Include="Images\preview64.png" />
+    <Resource Include="Images\printer64.png" />
+    <Resource Include="Images\Question16.png" />
+    <Resource Include="Images\Question64.png" />
+    <Resource Include="Images\ReadOnly16.png" />
+    <Resource Include="Images\Red48.png" />
+    <Resource Include="Images\Redo16.png" />
+    <Resource Include="Images\Redo64.png" />
+    <Resource Include="Images\Refresh16.png" />
+    <Resource Include="Images\Refresh64.png" />
+    <Resource Include="Images\Save16.png" />
+    <Resource Include="Images\Save64.png" />
+    <Resource Include="Images\Undo16.png" />
+    <Resource Include="Images\Undo64.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
