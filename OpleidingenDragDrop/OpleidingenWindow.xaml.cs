@@ -63,5 +63,55 @@ namespace Taak3
                 }
             }
         }
+
+        private void DropListBox(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent("mijnprogramma"))
+            {
+                OfficeProgramma sleepprogramma = (OfficeProgramma)e.Data.GetData("mijnprogramma");
+                ListBox droplijst = (ListBox)sender;
+                if (draglijst != droplijst)
+                {
+                    droplijst.Items.Add(sleepprogramma);
+                    draglijst.Items.Remove(draglijst.SelectedItem);
+                }
+            }
+        }
+
+        private void ButtonDoorgeven_Click(object sender, RoutedEventArgs e)
+        {
+            string tekst = "Volgende programma's zijn:\n";
+            if (ListBoxProgrammas.Items.Count > 0)
+            {
+                tekst += "\nNiet toegewezen: ";
+                foreach (OfficeProgramma prog in ListBoxProgrammas.Items)
+                {
+                    tekst += prog.naam + ", ";
+                }
+                tekst = tekst.Substring(0, tekst.Length - 2);
+            }
+
+            if (ListBoxGekend.Items.Count > 0)
+            {
+                tekst += "\nGekend: ";
+                foreach (OfficeProgramma prog in ListBoxGekend.Items)
+                {
+                    tekst += prog.naam + ", ";
+                }
+                tekst = tekst.Substring(0, tekst.Length - 2);
+            }
+
+            if (ListBoxTeVolgen.Items.Count > 0)
+            {
+                tekst += "\nTe volgen: ";
+                foreach (OfficeProgramma prog in ListBoxTeVolgen.Items)
+                {
+                    tekst += prog.naam + ", ";
+                }
+                tekst = tekst.Substring(0, tekst.Length - 2);
+            }
+
+            MessageBox.Show(tekst, "Overzicht");
+        }
     }
 }
