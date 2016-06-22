@@ -61,7 +61,6 @@ namespace WindowMetRibbonControl
             }
         }
 
-
         private void LeesBestand(string bestandsnaam)
         {
             try
